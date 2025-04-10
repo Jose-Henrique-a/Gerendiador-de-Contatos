@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, black , #0d2d67, #f01340, #f6bf90);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder, select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus, select:focus {
+    border-color: white;
+}
+
+select {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23fff' d='M0 0l5 6 5-6H0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select option {
+    background: #0d2d67;
+    color: white;
+    font-size: 1rem;
+}
+
+select option:hover {
+    background: #f45776;
+}
+
+button {
+    padding: 12px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: #ff6a88;
+}
+
+.list-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.list-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 15px;
+}
+
+li button:first-of-type {
+    border-color: #ff9a44;
+}
+
+li button:first-of-type:hover {
+    background-color: #ff9a44;
+    color: white;
+}
+
+li button:last-of-type {
+    border-color: #f45776;
+}
+
+li button:last-of-type:hover {
+    background-color: #f45776;
+    color: white;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input, select {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .list-container {
+        max-height: 200px;
+    }
+
+    li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 12px;
+    }
+
+    input, select {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .list-container {
+        max-height: 150px;
+    }
+
+    li {
+        font-size: 0.85rem;
+    }
+}
