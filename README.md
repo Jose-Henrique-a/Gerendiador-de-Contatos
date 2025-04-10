@@ -1,15 +1,12 @@
 # Gerendiador de Contatos
 Link para a aplicação que consume a API abaixo: https://jose-henrique-a.github.io/gerendiadorContatos/
 
+Em fase de desenvolvimento. Falta separar as rotas e outras melhorias. Mas está funcional(CRUD).
 
 # fastapi-contacts-app
 fastapi-contacts-app.
 
-Link para quando estiver em execução: https://web-production-eedc.up.railway.app/
-
-Para ver os contatos nessa API, pergunte-me como por mensagem.
-
-Ainda em construção, falta um front-end.
+Link da API para quando estiver em execução: https://web-production-eedc.up.railway.app/
 
 Conheça também:
 
