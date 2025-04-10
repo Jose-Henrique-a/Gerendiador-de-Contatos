@@ -1,5 +1,5 @@
 # Gerendiador de Contatos
-Link para a aplicação que consume a API abaixo: https://jose-henrique-a.github.io/gerendiadorContatos/
+Link para a aplicação que consume a API abaixo: https://jose-henrique-a.github.io/Gerendiador-de-Contatos/
 
 Em fase de desenvolvimento. Falta separar as rotas e outras melhorias. Mas está funcional(CRUD).
 
