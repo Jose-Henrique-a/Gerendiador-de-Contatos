@@ -6,19 +6,39 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, black , #0d2d67, #f01340, #f6bf90);
+    background: linear-gradient(135deg, black, #0d2d67, #f01340, #f6bf90);
     min-height: 100vh;
     color: white;
     padding: 20px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 600px; /* Reduzido para centralizar uma seção por página */
     margin: 0 auto;
     padding: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #ff6a88;
 }
 
 .section {
@@ -30,9 +50,8 @@ body {
 }
 
 h1 {
-    text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -88,10 +107,6 @@ select option {
     background: #0d2d67;
     color: white;
     font-size: 1rem;
-}
-
-select option:hover {
-    background: #f45776;
 }
 
 button {
@@ -169,6 +184,16 @@ li button:last-of-type:hover {
     color: white;
 }
 
+/* Animação de transição para entrada da página */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeIn 0.5s ease-out;
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     body {
@@ -176,13 +201,12 @@ li button:last-of-type:hover {
     }
 
     .container {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        max-width: 100%;
     }
 
     h1 {
         font-size: 1.8rem;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     h2 {
@@ -203,7 +227,7 @@ li button:last-of-type:hover {
         font-size: 0.9rem;
     }
 
-    button {
+    button, .nav-button {
         padding: 10px;
         font-size: 0.9rem;
     }
@@ -220,7 +244,6 @@ li button:last-of-type:hover {
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
-        margin-bottom: 10px;
     }
 
     h2 {
@@ -236,7 +259,7 @@ li button:last-of-type:hover {
         font-size: 0.85rem;
     }
 
-    button {
+    button, .nav-button {
         padding: 8px;
         font-size: 0.85rem;
     }
